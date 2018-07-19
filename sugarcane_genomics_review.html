@@ -3,12 +3,13 @@
 <head>
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" type="text/css" href="./theme/stylesheet/style.min.css">
+    <link rel="stylesheet" type="text/css" href="michaelalonge.com/theme/stylesheet/style.min.css">
 
-  <link rel="stylesheet" type="text/css" href="./theme/pygments/github.min.css">
-  <link rel="stylesheet" type="text/css" href="./theme/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="michaelalonge.com/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="michaelalonge.com/theme/font-awesome/css/font-awesome.min.css">
 
 
+    <link href="michaelalonge.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Michael Alonge Atom">
 
 
 
@@ -26,11 +27,11 @@
 <meta property="og:title" content="Sugarcane Genomics Review"/>
 <meta property="og:description" content="I have recently started working on a sugarcane genome assembly project, so I figured I would share some interesting points from my literature review. Sugarcane is obviously a very economically important crop, having applications in both food and energy production. Despite this economic importance, genomic resources are lacking for sugarcane due to the complexity of the genomes of modern cultivars. Let's look into the specifics of why that is."/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:url" content="./sugarcane_genomics_review.html"/>
+<meta property="og:url" content="michaelalonge.com/sugarcane_genomics_review.html"/>
 <meta property="og:type" content="article"/>
 <meta property="article:published_time" content="2018-01-29 12:00:00-08:00"/>
 <meta property="article:modified_time" content=""/>
-<meta property="article:author" content="./author/michael-alonge.html">
+<meta property="article:author" content="michaelalonge.com/author/michael-alonge.html">
 <meta property="article:section" content="genomics"/>
 <meta property="article:tag" content="plants"/>
 <meta property="article:tag" content="genomics"/>
@@ -43,11 +44,11 @@
       <a href="/">
         <img src="/images/seattle.JPG" alt="Michael Alonge" title="Michael Alonge">
       </a>
-      <h1><a href=".">Michael Alonge</a></h1>
+      <h1><a href="michaelalonge.com">Michael Alonge</a></h1>
 
 <p>python :: genomics :: music</p>      <nav>
         <ul class="list">
-          <li><a href="./pages/about.html#about">About</a></li>
+          <li><a href="michaelalonge.com/pages/about.html#about">About</a></li>
         </ul>
       </nav>
       <ul class="social">
@@ -59,16 +60,17 @@
   </aside>
   <main>
     <nav>
-      <a href=".">Home</a>
+      <a href="michaelalonge.com">Home</a>
       <a href="/">Blog</a>
       <a href="/pdfs/Michael_Alonge_CV.pdf">CV</a>
       <a href="/pages/about.html">About</a>
+      <a href="michaelalonge.com/feeds/all.atom.xml">Atom</a>
     </nav>
 
 <article>
   <header>
     <h1 id="sugarcane_genomics_review">Sugarcane Genomics Review</h1>
-    <p>Posted on Mon 29 January 2018 in <a href="./category/genomics.html">genomics</a></p>
+    <p>Posted on Mon 29 January 2018 in <a href="michaelalonge.com/category/genomics.html">genomics</a></p>
   </header>
   <div>
     <style type="text/css">/*!
@@ -1048,47 +1050,47 @@ h6:hover .anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>I have recently started working on a sugarcane genome assembly project, so I figured I would share some interesting points from my literature review. Sugarcane is obviously a very economically important crop, having applications in both food and energy production. Despite this economic importance, genomic resources are lacking for sugarcane due to the complexity of the genomes of modern cultivars. Let's look into the specifics of why that is.</p>
-<p><img src="../images/sugarcane.jpg" style="width: 500px" /></p>
-<h2 id="Taxonomy">Taxonomy<a class="anchor-link" href="#Taxonomy">¶</a></h2><p>Sugarcane is in the <em>Poaceae</em> family, the same mega-grass family as major crops such as rice, barley, maize, and wheat. When broadly referring to sugarcane, people are often talking about the <em>Saccharum</em> genus, in which there are a few prominent species.  From my reading, it seems that the two key species that have influenced the modern production of sugarcane are <em><a href="https://en.wikipedia.org/wiki/Saccharum_officinarum">S. officinarum</a></em> and <em><a href="https://en.wikipedia.org/wiki/Saccharum_spontaneum">S. spontaneum</a></em>, with many cultivars being interspecific hybrids between them. Specifically, around the late 19th century, important traits from <em>S. spontaneum</em> such as disease resistance and high yield were introgressed into <em>S. officinarum</em> varieties which already had high sugar content. Given that sugar cane has relatively long breeding cycles (10-15 years), there are relatively few generations separating modern varieties from these interspecific hybrid events<sup>1,2,3</sup>.</p>
+<p><img src="../images/sugarcane.jpg" style="width: 500px"></p>
+<h2 id="Taxonomy">Taxonomy<a class="anchor-link" href="#Taxonomy">&#182;</a></h2><p>Sugarcane is in the <em>Poaceae</em> family, the same mega-grass family as major crops such as rice, barley, maize, and wheat. When broadly referring to sugarcane, people are often talking about the <em>Saccharum</em> genus, in which there are a few prominent species.  From my reading, it seems that the two key species that have influenced the modern production of sugarcane are <em><a href="https://en.wikipedia.org/wiki/Saccharum_officinarum">S. officinarum</a></em> and <em><a href="https://en.wikipedia.org/wiki/Saccharum_spontaneum">S. spontaneum</a></em>, with many cultivars being interspecific hybrids between them. Specifically, around the late 19th century, important traits from <em>S. spontaneum</em> such as disease resistance and high yield were introgressed into <em>S. officinarum</em> varieties which already had high sugar content. Given that sugar cane has relatively long breeding cycles (10-15 years), there are relatively few generations separating modern varieties from these interspecific hybrid events<sup>1,2,3</sup>.</p>
 <p>In trying to anticipate potential challenges for genome assembly, this taxonomy raises some red flags. Interspecific hybrids can often be challenging to assembly given the relatively high degree of structural variation (and heterozygosity in general). Sugarcane takes this notion to the extreme.</p>
-<h2 id="Ploidy-and-Genome-Size">Ploidy and Genome Size<a class="anchor-link" href="#Ploidy-and-Genome-Size">¶</a></h2><p>Here are some numbers off-the-bat</p>
+<h2 id="Ploidy-and-Genome-Size">Ploidy and Genome Size<a class="anchor-link" href="#Ploidy-and-Genome-Size">&#182;</a></h2><p>Here are some numbers off-the-bat</p>
 <table>
 <caption>Table 1</caption>
-<tr>
-<th>Species</th>
-<th>Chromosome Number</th>
-<th>Ploidy</th>
-</tr>
-<tr>
-<td><i>S. officinarum</i></td>
-<td>2n=8x=80</td>
-<td>Decaploid</td>
-</tr>
-<tr>
-<td><i>S. spontaneum</i></td>
-<td>2n =5x-16x=40-128</td>
-<td>Octoploid</td>
-</tr>
-<tr>
-<td>Modern Hybrids</td>
-<td>2n=100-130</td>
-<td>Aneuploid</td>
-</tr>
+  <tr>
+    <th>Species</th>
+    <th>Chromosome Number</th>
+    <th>Ploidy</th>
+  </tr>
+  <tr>
+    <td><i>S. officinarum</i></td>
+    <td>2n=8x=80</td>
+    <td>Decaploid</td>
+  </tr>
+  <tr>
+    <td><i>S. spontaneum</i></td>
+    <td>2n =5x-16x=40-128</td>
+    <td>Octoploid</td>
+  </tr>
+  <tr>
+    <td>Modern Hybrids</td>
+    <td>2n=100-130</td>
+    <td>Aneuploid</td>
+  </tr>
 </table><p>Modern interspecific hybrids between <em>S. officinarum</em> and <em>S. spontaneum</em> exhibit allopoloploidy as well as aneuploidy. They are allopolyploids in that distinct portions of the genome are contributed to by these two ancestors. Specifically, about 70-80% (I've also read 75-85%) of the modern cultivars genome are of <em>S. officinarum</em> ancestry, while the rest comes from <em>S. spontaneum</em> <sup>1</sup>. Perhaps most interesting is the aneuploidy. For lack of a better way of putting it, this means that each chromosome has a distinct number of homologous/homeologous chromosomes (i.e. chromosome 1 may have 10 homologous/homeologous chromosomes, while chromosome 2 has 13 homologous/homeologous chromosomes). This is best visualized in the diagram below provided by <em>Grivet et al</em>, where each row represents a different chromosome group.</p>
-<p><img src="../images/sugarcane_aneuploid_diagram.jpg" style="width: 400px" /></p>
+<p><img src="../images/sugarcane_aneuploid_diagram.jpg" style="width: 400px"></p>
 <blockquote><p>"Schematic organization of the genome of a current sugarcane cultivar. Each bar represents a chromosome; yellow coloring represents regions originating from S. officinarum and green coloring from S. spontaneum. Chromosomes aligned within the same row are homologous (or homoeologous). The key characteristics of this genome are the high level of ploidy, the aneuploidy, the bispecific origin of the chromosomes (with at least three-quarters inherited from S. officinarum), the existence of structural differences between chromosomes of the two origins, and the occurrence of interspecific chromosome recombinants." <sup>1</sup></p>
 </blockquote>
 <p>The above diagram represents one particular cultivar, though the exact structure may change from individual to individual.</p>
 <p>Naturally, along with this ploidy comes a large genome size. Rough genome size estimates I have read for modern cultivars is around 10 Gbp (for context, the human genome size is roughly 3.3 Gbp). This puts it in the same class as other monster genomes that have recently been assembled by some of my colleagues here at Johns Hopkins. These include <a href="http://www.genetics.org/content/196/3/875">loblolly pine</a> and <a href="https://academic.oup.com/gigascience/article/6/11/1/4561661">hexploid wheat</a>.</p>
-<h2 id="Genome-Assembly-Strategy">Genome Assembly Strategy<a class="anchor-link" href="#Genome-Assembly-Strategy">¶</a></h2><p>Given the immense genome size of modern sugarcane cultivars as well as the aneuploidy/polyploidy, some refer to sugar cane as the hardest economically important genome to assemble. A quick NCBI search yeilds <a href="https://www.ncbi.nlm.nih.gov/assembly/GCA_002018215.1/">one assembly</a> for the <em>Saccharum</em> genus with a contig N50 of 8.4 kbp and a total assembly size of ~ 1 Gbp. Though this is almost a comically low N50, I think it speaks more to the difficulty of assembling this genome more than anything else.</p>
+<h2 id="Genome-Assembly-Strategy">Genome Assembly Strategy<a class="anchor-link" href="#Genome-Assembly-Strategy">&#182;</a></h2><p>Given the immense genome size of modern sugarcane cultivars as well as the aneuploidy/polyploidy, some refer to sugar cane as the hardest economically important genome to assemble. A quick NCBI search yeilds <a href="https://www.ncbi.nlm.nih.gov/assembly/GCA_002018215.1/">one assembly</a> for the <em>Saccharum</em> genus with a contig N50 of 8.4 kbp and a total assembly size of ~ 1 Gbp. Though this is almost a comically low N50, I think it speaks more to the difficulty of assembling this genome more than anything else.</p>
 <p>Obtaining long-read data alone (such as pacbio) is quite expensive and time-consuming. To achieve 40X coverage, a decent starting place for noisy read assemblers such as FALCON and canu, one must obtain 400Gbp of sequencing data! Then, one must deal with the unexpected behavior of genome assemblers given this genome size. I have already had some issues with k-mer counting using canu (perhaps more on this later). The aforementioned pine and wheat genomes are great starting places for me to research how to work with exceptionally large genomes.</p>
 <p>The most interesting and challenging aspect of this genome assembly project is the ploidy. For those not familiar with genome assembly, I won't get into it here, but polyploid genome assembly presents many challenges compared to diploid genome assembly. To mitigate this, a common strategy when working with polyploids is to sequence diploid progenitor species of the species in question. For example, genomic resources for such a <a href="https://www.ncbi.nlm.nih.gov/assembly/?term=Aegilops%20tauschii">progenitor species in wheat</a> were used for the hexaploid wheat assembly. However, such a resource is not currently available for modern sugarcane cultivar progenitor species. This is presumably because both progenitor species are polyploids (see Table 1) and would be difficult to assemble in their own right.</p>
 <p>Sugarcane, however, is not completely devoid of genetic resources. There is an abundance of linkage maps available for both progenitor <em>Saccharum</em> species as well as a few modern cultivars<sup>4,5</sup>. Here is a map of <em>Saccharum</em> spontaneum ‘SES 208 from <em>Al-Janabi, Salah M., et al.</em> published in 1993.</p>
-<p><img src="../images/sugarcane_linkage_map_1.png" style="width: 500px" /></p>
+<p><img src="../images/sugarcane_linkage_map_1.png" style="width: 500px"></p>
 <p>And here are just a few linkage groups of the Louisiana cultivar from a more recent (2016) study from <em>Liu, Pingwu, et al.</em></p>
-<p><img src="../images/sugarcane_linkage_map_2.gif" style="width: 500px" /></p>
+<p><img src="../images/sugarcane_linkage_map_2.gif" style="width: 500px"></p>
 <p>I will certainly be investigating how we might be able to leverage the abundance of linkage maps available in the <em>Saccharum</em> to aid with the assembly process, specifically anchoring whatever contigs we might produce. Of course, this will still be pretty challenging since any assembly we produce will probably be fairly fragmented, which means fewer contigs will be anchored using linkage maps.</p>
-<h1 id="References">References<a class="anchor-link" href="#References">¶</a></h1><ol>
+<h1 id="References">References<a class="anchor-link" href="#References">&#182;</a></h1><ol>
 <li><p>Grivet, Laurent, and Paulo Arruda. "Sugarcane genomics: depicting the complex genome of an important tropical crop." Current Opinion in Plant Biology 5.2 (2002): 122-127.</p>
 </li>
 <li><p>Butterfield, M. K., A. D’hont, and N. Berding. "The sugarcane genome: a synthesis of current understanding, and lessons for breeding and biotechnology." Proc S Afr Sug Technol Ass. Vol. 75. 2001.</p>
@@ -1100,9 +1102,12 @@ h6:hover .anchor-link {
 <li><p>Liu, Pingwu, et al. "Identification of quantitative trait loci controlling sucrose content based on an enriched genetic linkage map of sugarcane (Saccharum spp. hybrids) cultivar ‘LCP 85-384’." Euphytica 207.3 (2016): 527-549.</p>
 </li>
 </ol>
+
 </div>
 </div>
 </div>
+ 
+
 
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
@@ -1135,8 +1140,8 @@ h6:hover .anchor-link {
   </div>
   <div class="tag-cloud">
     <p>
-      <a href="./tag/plants.html">plants</a>
-      <a href="./tag/genomics.html">genomics</a>
+      <a href="michaelalonge.com/tag/plants.html">plants</a>
+      <a href="michaelalonge.com/tag/genomics.html">genomics</a>
     </p>
   </div>
 <div id="disqus_thread"></div>
@@ -1175,7 +1180,7 @@ h6:hover .anchor-link {
   "@context" : "http://schema.org",
   "@type" : "Blog",
   "name": " Michael Alonge ",
-  "url" : ".",
+  "url" : "michaelalonge.com",
   "image": "/images/seattle.JPG",
   "description": ""
 }
@@ -1191,10 +1196,10 @@ h6:hover .anchor-link {
   "author": {
     "@type": "Person",
     "name": "Michael Alonge",
-    "url": "./author/michael-alonge.html"
+    "url": "michaelalonge.com/author/michael-alonge.html"
   },
   "image": "/images/seattle.JPG",
-  "url": "./sugarcane_genomics_review.html",
+  "url": "michaelalonge.com/sugarcane_genomics_review.html",
   "description": "I have recently started working on a sugarcane genome assembly project, so I figured I would share some interesting points from my literature review. Sugarcane is obviously a very economically important crop, having applications in both food and energy production. Despite this economic importance, genomic resources are lacking for sugarcane due to the complexity of the genomes of modern cultivars. Let's look into the specifics of why that is."
 }
 </script></body>

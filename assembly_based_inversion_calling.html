@@ -20,11 +20,11 @@
 
 
 <meta name="author" content="Michael Alonge" />
-<meta name="description" content="Assembly Based Inversion CallingAside from genome alignment based methods for calling structural variants (SVs), there are also methods which utilize whole genome alignments. Assemblytics is an example of such a method, as it scans nucmer alignments of a query genome to a reference genome to call variants. However, Assemblytics only calls insertions and deletions (and expansions and contractions, but we can consider those insertions and deletions respectively). In an effort to expand this software, I want to add the ability to call more types of variants such as inversions and translocations. Here, I focus on inversions and begin to investigate how very simple inversions appear in genome-genome alignments." />
+<meta name="description" content="Aside from genome alignment based methods for calling structural variants (SVs), there are also methods which utilize whole genome alignments. Assemblytics is an example of such a method, as it scans nucmer alignments of a query genome to a reference genome to call variants. However, Assemblytics only calls insertions and deletions (and expansions and contractions, but we can consider those insertions and deletions respectively). In an effort to expand this software, I want to add the ability to call more types of variants such as inversions and translocations. Here, I focus on inversions and begin to investigate how very simple inversions appear in genome-genome alignments." />
 <meta name="keywords" content="genomics, structural variants">
 <meta property="og:site_name" content="Michael Alonge"/>
-<meta property="og:title" content="Assembly Based Inversion Calling"/>
-<meta property="og:description" content="Assembly Based Inversion CallingAside from genome alignment based methods for calling structural variants (SVs), there are also methods which utilize whole genome alignments. Assemblytics is an example of such a method, as it scans nucmer alignments of a query genome to a reference genome to call variants. However, Assemblytics only calls insertions and deletions (and expansions and contractions, but we can consider those insertions and deletions respectively). In an effort to expand this software, I want to add the ability to call more types of variants such as inversions and translocations. Here, I focus on inversions and begin to investigate how very simple inversions appear in genome-genome alignments."/>
+<meta property="og:title" content="Assembly-Based Inversion Calling"/>
+<meta property="og:description" content="Aside from genome alignment based methods for calling structural variants (SVs), there are also methods which utilize whole genome alignments. Assemblytics is an example of such a method, as it scans nucmer alignments of a query genome to a reference genome to call variants. However, Assemblytics only calls insertions and deletions (and expansions and contractions, but we can consider those insertions and deletions respectively). In an effort to expand this software, I want to add the ability to call more types of variants such as inversions and translocations. Here, I focus on inversions and begin to investigate how very simple inversions appear in genome-genome alignments."/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content="./assembly_based_inversion_calling.html"/>
 <meta property="og:type" content="article"/>
@@ -35,7 +35,7 @@
 <meta property="article:tag" content="genomics"/>
 <meta property="article:tag" content="structural variants"/>
 <meta property="og:image" content="/images/seattle.JPG">
-  <title>Michael Alonge &ndash; Assembly Based Inversion Calling</title>
+  <title>Michael Alonge &ndash; Assembly-Based Inversion Calling</title>
 </head>
 <body>
   <aside>
@@ -67,7 +67,7 @@
 
 <article>
   <header>
-    <h1 id="assembly_based_inversion_calling">Assembly Based Inversion Calling</h1>
+    <h1 id="assembly_based_inversion_calling">Assembly-Based Inversion Calling</h1>
     <p>Posted on Tue 11 September 2018 in <a href="./category/genomics.html">genomics</a></p>
   </header>
   <div>
@@ -1047,7 +1047,7 @@ h6:hover .anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 align="center">Assembly Based Inversion Calling</h1><p>Aside from <a href="https://github.com/fritzsedlazeck/Sniffles">genome alignment based methods</a> for calling structural variants (SVs), there are also methods which utilize whole genome alignments. <a href="http://assemblytics.com/">Assemblytics</a> is an example of such a method, as it scans nucmer alignments of a query genome to a reference genome to call variants. However, Assemblytics only calls insertions and deletions (and expansions and contractions, but we can consider those insertions and deletions respectively). In an effort to expand this software, I want to add the ability to call more types of variants such as inversions and translocations. Here, I focus on inversions and begin to investigate how very simple inversions appear in genome-genome alignments.</p>
+<p>Aside from <a href="https://github.com/fritzsedlazeck/Sniffles">genome alignment based methods</a> for calling structural variants (SVs), there are also methods which utilize whole genome alignments. <a href="http://assemblytics.com/">Assemblytics</a> is an example of such a method, as it scans nucmer alignments of a query genome to a reference genome to call variants. However, Assemblytics only calls insertions and deletions (and expansions and contractions, but we can consider those insertions and deletions respectively). In an effort to expand this software, I want to add the ability to call more types of variants such as inversions and translocations. Here, I focus on inversions and begin to investigate how very simple inversions appear in genome-genome alignments.</p>
 <p>I will be using Minimap2 to perform genome-genome alignments. In general, as is done by Assemblytics, one can observe CIGAR strings <em>within</em> alignments, or patterns <em>between</em> alignments to call SVs. For example, insertions and deletions may be traversed in a single alignment and would be indicated by "I" and "D" codes respectively in the CIGAR string. But indels can also be inferred by observing discrepancies in the "start" and "end" positions of alignments with respect to the reference and query genomes.</p>
 <p>For inversions, however, there is no way to directly encode such a variant in a CIGAR string. Therefore, one would expect that any inversion detectable using this method should be "between" alignments. For example, if there are 3 sorted alignments with "+", "-", and "+" strands, we might call the sequence implicated in the middle alignment an inversion. With this in mind, I want to answer the following questions:</p>
 <ol>
@@ -1343,8 +1343,8 @@ h6:hover .anchor-link {
 {
   "@context": "http://schema.org",
   "@type": "BlogPosting",
-  "name": "Assembly Based Inversion Calling",
-  "headline": "Assembly Based Inversion Calling",
+  "name": "Assembly-Based Inversion Calling",
+  "headline": "Assembly-Based Inversion Calling",
   "datePublished": "2018-09-11 12:00:00-07:00",
   "dateModified": "",
   "author": {
@@ -1354,7 +1354,7 @@ h6:hover .anchor-link {
   },
   "image": "/images/seattle.JPG",
   "url": "./assembly_based_inversion_calling.html",
-  "description": "Assembly Based Inversion CallingAside from genome alignment based methods for calling structural variants (SVs), there are also methods which utilize whole genome alignments. Assemblytics is an example of such a method, as it scans nucmer alignments of a query genome to a reference genome to call variants. However, Assemblytics only calls insertions and deletions (and expansions and contractions, but we can consider those insertions and deletions respectively). In an effort to expand this software, I want to add the ability to call more types of variants such as inversions and translocations. Here, I focus on inversions and begin to investigate how very simple inversions appear in genome-genome alignments."
+  "description": "Aside from genome alignment based methods for calling structural variants (SVs), there are also methods which utilize whole genome alignments. Assemblytics is an example of such a method, as it scans nucmer alignments of a query genome to a reference genome to call variants. However, Assemblytics only calls insertions and deletions (and expansions and contractions, but we can consider those insertions and deletions respectively). In an effort to expand this software, I want to add the ability to call more types of variants such as inversions and translocations. Here, I focus on inversions and begin to investigate how very simple inversions appear in genome-genome alignments."
 }
 </script></body>
 </html>

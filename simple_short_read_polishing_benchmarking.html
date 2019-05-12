@@ -1248,8 +1248,8 @@ h6:hover .anchor-link {
       <td><b># Contigs</b></td>
       <td>2822</td>
     </tr>
-</table><p>The assembly was first assembled by wtdbg2, then underwent an extra round of polishing with the wtpoa-cns module. Therefore, the accuracy should be slightly better than the original wtdbg2 assembly. All polishing tools used default settings, with the exception of Pilon, which utilized the --fix-bases option.</p>
-<h2 id="%-Correct-k-mers">% Correct k-mers<a class="anchor-link" href="#%-Correct-k-mers">&#182;</a></h2><p>To compare the effectiveness of these tools, we will use the "cold" module of <a href="https://github.com/TGAC/KAT">KAT</a>. First, the program establishes a database of accurate k-mers from ample coverage of Illumina short reads. Then, for each <em>k</em>-mer in a contig, it queries this database. We can expect that errors in a contig will yield k-mers that do not appear in our accurate k-mer database. The percentage of correct k-mers is the percentage of k-mers from a contig which were present in our k-mer database. Let's process the KAT output for our three assemblies.</p>
+</table><p>The assembly was first assembled by wtdbg2, then underwent an extra round of long-read polishing with the wtpoa-cns module. Therefore, the accuracy should be slightly better than the original wtdbg2 assembly. All polishing tools used default settings, with the exception of Pilon, which utilized the --fix-bases option.</p>
+<h1 id="%-Correct-k-mers">% Correct k-mers<a class="anchor-link" href="#%-Correct-k-mers">&#182;</a></h1><p>To compare the effectiveness of these tools, we will use the "cold" module of <a href="https://github.com/TGAC/KAT">KAT</a>. First, the program establishes a database of accurate k-mers from ample coverage of Illumina short reads. Then, for each <em>k</em>-mer in a contig, it queries this database. We can expect that errors in a contig will yield k-mers that do not appear in our accurate k-mer database. The percentage of correct k-mers is the percentage of k-mers from a contig which were present in our k-mer database. Let's process the KAT output for our three assemblies.</p>
 
 </div>
 </div>
@@ -1911,7 +1911,7 @@ IiIishELKiIiIiIiIhuxoCIiIiIiIrIRCyoiIiIiIiIbsaAiIiIiIiKyEQsqIiIiIiIiG/0/JMnA
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>So far, it looks like freebayes/bcftools has the sligh edge with a better distribution of % correct contigs.</p>
-<h3 id="Consensus-Accuracy">Consensus Accuracy<a class="anchor-link" href="#Consensus-Accuracy">&#182;</a></h3><p>Note that the "% correct k-mer" for a given contig is not the same is the consensus accuracy (the percentage of correct bases). In fact, "% correct k-mer" should be quite a bit lower than the consensus accuracy. That is because a single error in a contig can yield many incorrect k-mers. Let's dig into this:</p>
+<h1 id="Consensus-Accuracy">Consensus Accuracy<a class="anchor-link" href="#Consensus-Accuracy">&#182;</a></h1><p>Note that the "% correct k-mer" for a given contig is not the same is the consensus accuracy (the percentage of correct bases). In fact, "% correct k-mer" should be quite a bit lower than the consensus accuracy. That is because a single error in a contig can yield many incorrect k-mers. Let's dig into this:</p>
 <p>A single error will produce <em>k</em> consecutive incorrect <em>k</em>-mers (i.e. all of the <em>k</em>-mers that span that error). Two errors can induce as little as <em>k</em> +1 consecutive incorrect <em>k</em>-mers and as many as 2<em>k</em> consecutive incorrect <em>k</em>-mers. The former occurs when errors are adjacent and the latter occurs when the errors are separated by <em>k</em> bp.</p>
 <p>To get an upper bound on consensus accuracy, we will assume that every <em>k</em> incorrect k-mers was produced by a single error. To get a lower bound, we will assume that the number of incorrect k-mers is equal to the number of errors + <em>k</em> - 1:</p>
 <p>If $w = $ # of incorrect k-mers and $n$ = the contig length, we can express the lower bound and upper bound of consensus accuracy as follows:</p>
@@ -4437,7 +4437,7 @@ AElFTkSuQmCC
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Conclusions">Conclusions<a class="anchor-link" href="#Conclusions">&#182;</a></h2><p>Our analysis suggests that the Vertebrate Genomes Project recipe for polishing, which employs a combination of freebayes and bcftools, does the best job of polishing our wtdbg2 tomato genome. Though I don't include this analysis in this notebook, I also observe that the freebayes polished genome produces more accurate alignments to the SL3.0 Tomato reference genome relative to the other assemblies. We can also see that the consensus accuracy distributions for this freebayes polished assembly look quite good, even after just one round of polishing.</p>
+<h1 id="Conclusions">Conclusions<a class="anchor-link" href="#Conclusions">&#182;</a></h1><p>Our analysis suggests that the Vertebrate Genomes Project recipe for polishing, which employs a combination of freebayes and bcftools, does the best job of polishing our wtdbg2 tomato genome. Though I don't include this analysis in this notebook, I also observe that the freebayes polished genome produces more accurate alignments to the SL3.0 Tomato reference genome relative to the other assemblies. We can also see that the consensus accuracy distributions for this freebayes polished assembly look quite good, even after just one round of polishing.</p>
 
 </div>
 </div>
